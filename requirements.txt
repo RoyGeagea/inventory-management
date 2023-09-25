@@ -1,0 +1,10 @@
+python
+numpy=1.19.2 
+pandas
+matplotlib
+scikit-learn
+seaborn
+tabulate
+keras
+optuna
+ipykernel
