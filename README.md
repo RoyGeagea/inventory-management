@@ -20,50 +20,84 @@ By adopting this approach, companies can benefit from several significant advant
 
 The project is organized as follows:
 
-project_root/
+**project_root/**
+
 |-- **checkpoint/**
-|   |-- base_model_checkpoint.h5               # Optimal weights for the basic model
-|   |-- transfert_learning_model_checkpoint.h5  # Optimal weights for transfer learning
+
+| |-- base_model_checkpoint.h5 # Optimal weights for the basic model
+
+| |-- transfert_learning_model_checkpoint.h5 # Optimal weights for transfer learning
+
 |-- **data/**
-|   |-- 2017PurchasePricesDec.csv              # Details of product purchase and sale prices
-|   |-- BegInvFinal1232016.csv                 # Inventory start date data by product and store
-|   |-- EndInvFinal1232016.csv                 # Inventory end date data by product and warehouse
-|   |-- InvoicePurchases12312016.csv           # Invoice data
-|   |-- PurchasesFinal12312016.csv             # Product purchase data by store, including quantity, price, and other relevant variables
-|   |-- SalesFinal12312016.csv                 # Historical sales data
-|   |
-|   |-- **preprocessing/**
-|   |-- **transfertLearning/**
-|
-|-- **notebooks/**
-|   |-- data_exploration.ipynb                 # Data exploration
-|   |-- data_preprocessing.ipynb               # Data preprocessing
-|   |-- stock_management_model_development.ipynb  # Design, hyperparameter search, and training of stock management model
-|   |-- stock_management_model_evaluation.ipynb   # Stock management model evaluation and comparison with reference models
-|   |-- reference_models_training.ipynb          # Training and evaluation of reference models
-|   |-- transfert_learning.ipynb                 # Transfer Learning techniques for model adaptation
-|
-|-- **src/**
-|   |-- data_preprocessing_utils.py              # Tools for data preprocessing
-|   |-- model.py                                 # Model architecture
-|   |-- utils.py                                # Practical tools
-|
-|-- README.md                                   # This README file
-|-- requirements.txt                           # Project dependencies
+
+| |-- 2017PurchasePricesDec.csv # Details of product purchase and sale prices
+
+| |-- BegInvFinal1232016.csv # Inventory start date data by product and store
+
+| |-- EndInvFinal1232016.csv # Inventory end date data by product and warehouse
+
+| |-- InvoicePurchases12312016.csv # Invoice data
+
+| |-- PurchasesFinal12312016.csv # Product purchase data by store, including quantity, price, and other relevant variables
+
+|  |-- SalesFinal12312016.csv # Historical sales data
 
 
+**| |-- prepocessing**      # folder containing the preprocessed data
+
+**| |-- transfertLearning** # folder containing target company data for transfer learning
+
+| |
+
+|  **|-- notebooks/**
+
+| |-- data_exploration.ipynb # Data exploration
+
+| |-- data_preprocessing.ipynb # Data preprocessing
+
+| |-- stock_management_model_development.ipynb # Design, hyperparameter search and training of stock management model
+
+| |-- stock_management_model_evaluation.ipynb # Stock management model evaluation and comparison with reference models
+
+| |-- reference_models_training.ipynb # Training and evaluation of reference models
+
+| |-- transfert_learning.ipynb # Transfer Learning techniques for model adaptation
+
+| |
+
+**|-- src/**
+
+| |-- data_preprocessing_utils.py # Tools for data preprocessing
+
+| |-- model.py # Model architecture
+
+| |-- utils.py # Practical tools
+
+| |
+
+**|-- README.md** # This README file
+
+**|-- requirements.txt** # Project dependencies
 
 ### DEPENDENCIES INSTALLATION
 
 To ensure that this project runs smoothly, it's important to have certain libraries installed on your system. These libraries provide the tools needed to run and work with our inventory management model based on Deep Learning and transfer learning.
 Make sure that the following libraries are installed on your system:
+
 o	Python (version 3.8): This is the central programming language for our project.
+
 o	TensorFlow (version 2.4): This open-source library is used to implement machine learning and deep learning in our model.
+
 o	Keras (version x.x): As a high-level interface, Keras simplifies the creation and training of deep learning models. It can rely on TensorFlow as a backend.
+
 o	scikit-learn (version 1.3): This library is essential for machine learning, machine learning and data science tasks.
+
 o	pandas (version 2.0): For data manipulation and analysis, pandas offers powerful features.
+
 o	matplotlib (version 3.7): For graphical visualization of data and results, matplotlib is a must.
+
 o	numpy (version 1.20): This library plays a crucial role in the numerical calculations required for our project.
+
 These libraries fulfill specific roles and are essential at different stages of the project, from data preparation to results evaluation. Be sure to adjust versions according to your needs and the compatibility requirements of your project.
 If you haven't already installed them, you can follow the instructions in the next section to set up a runtime environment with all project dependencies from scratch.
 
