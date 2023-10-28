@@ -127,11 +127,15 @@ $ conda activate environment_name
 ```console
 $ pip install tensorflow==2.4
 ```
--    You need ipykernel to run your notebook jupyter, run the following command to install ipykernel in your environment: 
+-	Then install PrettyTable using the following command:
+```console
+$ pip install prettytable
+```
+-  You need ipykernel to run your notebook jupyter, run the following command to install ipykernel in your environment: 
 ```console
 $ pip install ipykernel
 ```
-- Finally, to avoid package conflicts, update typing-extensions with the following command:
+-  Finally, to avoid package conflicts, update typing-extensions with the following command:
 ```console
 $ pip install typing-extensions==3.7.4
 ```
